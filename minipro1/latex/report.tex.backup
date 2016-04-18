@@ -1,0 +1,78 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath} 
+% \usepackage[T1]{fontenc}
+\usepackage{graphicx}
+%\documentclass{article}
+%\usepackage[showframe]{geometry}
+\usepackage{layout}
+\usepackage[margin=1.5in]{geometry}
+%\usepackage{multirow}
+\usepackage{hhline} %for double hlines
+\usepackage{booktabs} %for all professional-looking table characterictics ;-)
+\usepackage{float}
+\restylefloat{table}
+\floatstyle{plaintop}
+\usepackage[tableposition=top]{caption}
+\renewcommand{\arraystretch}{1.5}
+
+\usepackage{subcaption}
+
+
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+
+\usepackage{listings}
+\lstset{language=Python, showspaces=false, showstringspaces=false, numbers=left, breaklines=true}
+% Title Page
+\title{\textbf{Python in the enterprise} \\ mini-project \#1: Flight recorder simulator}
+\author{Dawid Gerstel}
+
+\begin{document}
+\maketitle
+
+The objective was to create an application processing previously recorded flight parameters -- read from a text file. 
+The flight data are assumed to be csv files from the Tacview flight simulator, however the application should enable quick customisation to different input data with all the necessary parameters.
+
+The next section describes baseline of the project envisaged at its beginning.
+
+\section{Application overview}
+The Tacview data contain (csv file columns) the following:
+\begin{itemize}
+  \item time [sec] -- expressed with respect to the aircraft launching
+  \item Longitude [deg]
+  \item Latitude [deg]
+  \item Altitude [ft]
+  \item Roll [deg] -- plane's rotation perpendicular to its direction
+  \item Pitch [deg] -- plane's elevation angle
+  \item Yaw [deg] -- plane's orientation relative to the North
+\end{itemize}
+
+The above data let analyse recorded flight in terms of plane's:
+\begin{itemize}
+  \item position and orientation -- direct plotting the input parameters comprising plane's trajectory; extreme (untolerable) aircraft's orientations should be noted (e.g. nearly vertical pitch)
+  \item velocities -- translational and rotational; speed
+  \item accelerations -- interesting because the crew (and passengers) are sensitive to these
+\end{itemize}
+
+\section{Project content}
+
+The project was entirely performed using jupyter notebook (the newest version of ipython notebook) that actually runs Python kernel on a local machine. Such approach, enabled combing interactive code developing with high quality text formatting, hence the project description including its full code is available in the jupyter-notebook \texttt{FlightAnalyser.ipynb}. However, due to many library dependencies it is more convenient to browse the project in a non-interactive format that is available in an html document: \texttt{FlightAnalyser.html}.
+
+Additionally, the code alone is extracted in the file: \texttt{FlightAnalyser.py}
+
+\section{Summary of project developing}
+Although, the author was initially inspired to work on a daily basis on the project -- due to other duties it became tremendously challenging to regularly find time slots for developing the project \footnote{This is by no means an excuse, but merely an observation.}.
+
+Instead, the project has been created in many sessions, usually a few days apart. The project was begun 28.03 and effectively finished 17.04.
+
+The main benefits of this project are firstly reviewing concepts of Python programming (especially object-oriented design and trying to program in idiomatic Python) and secondly familiarising oneself with jupyter notebook, which is in author's opinion very pragmatic method of sharing well-documented results including techniques they have been obtained with.
+
+\end{document}          
