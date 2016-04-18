@@ -64,9 +64,9 @@ The above data let analyse recorded flight in terms of plane's:
 
 \section{Project content}
 
-The project was entirely performed using jupyter notebook (the newest version of ipython notebook) that actually runs Python kernel on a local machine. Such approach, enabled combing interactive code developing with high quality text formatting, hence the project description including its full code is available in the jupyter-notebook \texttt{FlightAnalyser.ipynb}. However, due to many library dependencies it is more convenient to browse the project in a non-interactive format that is available in an html document: \texttt{FlightAnalyser.html}.
+The project was entirely performed using jupyter notebook (the newest version of ipython notebook) that actually runs Python kernel on a local machine. Such approach, enabled combing interactive code developing with high quality text formatting, hence the project description including its full code is available in the jupyter-notebook \texttt{../code/FlightAnalyser.ipynb}. However, due to many library dependencies it is more convenient to browse the project in a non-interactive format that is available in an html document: \texttt{../documents/FlightAnalyser.html}.
 
-Additionally, the code alone is extracted in the file: \texttt{FlightAnalyser.py}
+Additionally, the code alone is extracted in the file: \texttt{../code/FlightAnalyser.py}
 
 \section{Summary of project developing}
 Although, the author was initially inspired to work on a daily basis on the project -- due to other duties it became tremendously challenging to regularly find time slots for developing the project \footnote{This is by no means an excuse, but merely an observation.}.
